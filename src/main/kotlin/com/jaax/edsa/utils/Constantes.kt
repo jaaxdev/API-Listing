@@ -2,12 +2,12 @@ package com.jaax.edsa.utils
 
 class Constantes {
     companion object {
-        const val ENDPOINT_USUARIO_GLOBAL = "listo/user-global"
-        const val ENDPOINT_EDSA_USUARIO = "/listo/edsa/v1/usuario"
-        const val ENDPOINT_EDSA_EMAIL = "/listo/edsa/v1/usuario/email"
-        const val ENDPOINT_EDSA_CUENTA = "/listo/edsa/v1/usuario/email/cuenta"
-        const val ENDPOINT_BIRTHDAY_PERSONA = "listo/birthday/v1/persona"
-        const val ENDPOINT_STUDENT_ALUMNO = "listo/student/v1/alumno"
-        const val ENDPOINT_SHOPPING_PRODUCTO = "listo/shopping/v1/producto"
+        const val ENDPOINT_USUARIO_GLOBAL = "/listing/v1/userglobal"
+        const val ENDPOINT_EDSA_USUARIO = "/listing/edsa/v1/usuario"
+        const val ENDPOINT_EDSA_EMAIL = "/listing/edsa/v1/usuario/email"
+        const val ENDPOINT_EDSA_CUENTA = "/listing/edsa/v1/usuario/email/cuenta"
+        const val ENDPOINT_BIRTHDAY_PERSONA = "/listing/birthday/v1/persona"
+        const val ENDPOINT_STUDENT_ALUMNO = "/listing/student/v1/alumno"
+        const val ENDPOINT_SHOPPING_PRODUCTO = "/listing/shopping/v1/producto"
     }
 }

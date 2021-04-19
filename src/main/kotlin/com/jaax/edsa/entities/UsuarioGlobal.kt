@@ -1,15 +1,13 @@
 package com.jaax.edsa.entities
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
+@Table( name = "globaluser" )
 data class UsuarioGlobal(
     @Id
+    @Column( unique = true, name = "global_username" )
     var name: String = "",
-    @GeneratedValue
-    val number: Long = 0,
     var password: String = "",
     var keyword: String = ""
 )

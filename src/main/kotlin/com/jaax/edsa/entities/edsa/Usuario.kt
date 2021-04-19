@@ -1,15 +1,12 @@
 package com.jaax.edsa.entities.edsa
 
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.OneToMany
-import javax.persistence.Table
+import javax.persistence.*
 
 @Entity
 @Table( name = "usuarios" )
 data class Usuario(
     @Id
-    var name: String = "",
-    @OneToMany
-    var emails: List<Email>? = null
+    var username: String = "",
+    @OneToMany( mappedBy = "usuario", fetch = FetchType.LAZY )
+    var emails: MutableList<Email>? = null
 )

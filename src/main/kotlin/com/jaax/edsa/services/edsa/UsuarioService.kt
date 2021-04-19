@@ -15,18 +15,18 @@ class UsuarioService( val usuarioDAO: UsuarioDAO ): BasicCRUD<Usuario, String> {
     override fun findById(id: String): Usuario? = usuarioDAO.findByIdOrNull(id)
 
     override fun save(t: Usuario): Usuario {
-        return if( !usuarioDAO.existsById(t.name) ) {
+        return if( !usuarioDAO.existsById(t.username) ) {
             usuarioDAO.save(t)
         } else {
-            throw DuplicateKeyException( "${t.name} ya existe" )
+            throw DuplicateKeyException( "${t.username} ya existe" )
         }
     }
 
     override fun update(t: Usuario): Usuario {
-        return if( usuarioDAO.existsById(t.name) ){
+        return if( usuarioDAO.existsById(t.username) ){
             usuarioDAO.save(t)
         } else {
-            throw EntityNotFoundException( "${t.name} no existe" )
+            throw EntityNotFoundException( "${t.username} no existe" )
         }
     }
 
