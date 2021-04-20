@@ -25,7 +25,7 @@ abstract class BasicController<T, ID>( private val basicCRUD: BasicCRUD<T, ID> )
         .body( this.basicCRUD.save(body) )
 
     @PutMapping
-    fun update( @RequestBody body: T ) = this.basicCRUD.save(body)
+    fun update( @RequestBody body: T ) = this.basicCRUD.update(body)
 
     @DeleteMapping( "/{id}" )
     fun deleteById( @PathVariable id: ID ) = this.basicCRUD.deleteById(id)
