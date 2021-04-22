@@ -1,24 +1,16 @@
 package com.jaax.edsa
 
-import com.jaax.edsa.entities.UsuarioGlobal
 import com.jaax.edsa.entities.edsa.Cuenta
 import com.jaax.edsa.entities.edsa.Email
-import com.jaax.edsa.entities.edsa.Usuario
-import com.jaax.edsa.services.UsuarioGlobalService
 import com.jaax.edsa.services.edsa.CuentaService
 import com.jaax.edsa.services.edsa.EmailService
-import com.jaax.edsa.services.edsa.UsuarioService
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
 
 @Component
-class OnBoot(
-    private val usuarioService: UsuarioService,
-    private val emailService: EmailService,
-    private val cuentaService: CuentaService,
-    private val usuarioGlobalService: UsuarioGlobalService
-): ApplicationRunner {
+class OnBoot: ApplicationRunner {
 
     override fun run(args: ApplicationArguments?) {
         /*val usuarios = listOf( Usuario(
@@ -41,13 +33,5 @@ class OnBoot(
             println( "Posting ${it.username}" )
             usuarioService.save( it )
         }*/
-
-        val usrglobal = UsuarioGlobal(
-            name = "jaax",
-            password = "jaax123",
-            keyword = "jaaxkey"
-        )
-        if( !usuarioGlobalService.usuarioGlobalDAO.existsById(usrglobal.name) ){ usuarioGlobalService.save(usrglobal) }
-
     }
 }

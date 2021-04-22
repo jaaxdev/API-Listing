@@ -9,4 +9,4 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping( Constantes.ENDPOINT_STUDENT_ALUMNO )
-class AlumnoController( alumnoService: AlumnoService ): BasicController<Alumno, String>( alumnoService )
+class AlumnoController( alumnoService: AlumnoService ): BasicController<Alumno, Int>( alumnoService )

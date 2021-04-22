@@ -5,8 +5,10 @@ import javax.persistence.*
 @Entity
 @Table( name = "alumnos" )
 data class Alumno(
+    @Id
     @GeneratedValue( strategy = GenerationType.AUTO )
     val number: Int = 0,
-    @Id
-    var name: String = ""
+    var name: String = "",
+    var lastNameP: String = "",
+    var lastNameM: String = ""
 )

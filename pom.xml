@@ -11,6 +11,7 @@
 	<groupId>com.jaax</groupId>
 	<artifactId>edsa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>EDSA</name>
 	<description>Listing APP</description>
 	<properties>
@@ -72,6 +73,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.0.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>

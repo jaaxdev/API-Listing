@@ -5,10 +5,9 @@ import javax.persistence.*
 @Entity
 @Table( name = "cuentas" )
 data class Cuenta(
-    @ManyToOne( fetch = FetchType.LAZY, optional = false )
-    @JoinColumn( name = "email_id" )
-    val email: Email? = null,
+    //@JoinColumn( name = "email_id" )
     @Id
     var type: String = "",
-    var password: String = ""
+    var password: String = "",
+    var emailID: String = ""
 )
